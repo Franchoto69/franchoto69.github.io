@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Black Ops One', sans-serif;
+    text-align: center;
+}
+
+#countdown-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Pantalla completa para el contador */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#reveal-section {
+    width: 100%;
+    min-height: 100vh; /* Altura mínima para permitir scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0; /* Espacio arriba y abajo */
+}
+
+#intro-text {
+    font-size: 36px;
+    text-transform: lowercase;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff; /* Blanco para el contador */
+    margin-bottom: 20px;
+}
