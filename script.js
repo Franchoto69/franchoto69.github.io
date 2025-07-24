@@ -1,5 +1,5 @@
 // Fecha de lanzamiento (cámbiala: año, mes-1, día, hora, minutos, segundos)
-const launchDate = new Date(2025, 6, 25, 0, 0, 0).getTime();
+const launchDate = new Date(2025, 6, 26, 0, 0, 0).getTime();
 
 const countdown = setInterval(() => {
     const now = new Date().getTime();
