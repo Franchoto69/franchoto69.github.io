@@ -1,42 +1,97 @@
 body {
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
+    background: #000; /* Fondo negro */
+    color: #fff; /* Letras blancas */
     font-family: 'Black Ops One', sans-serif;
     text-align: center;
+    min-height: 100vh; /* Permite scroll */
 }
 
-#countdown-section {
-    position: absolute;
-    top: 0;
-    left: 0;
+#main-section {
     width: 100%;
-    height: 100vh; /* Pantalla completa para el contador */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#reveal-section {
-    width: 100%;
-    min-height: 100vh; /* Altura mínima para permitir scroll */
+    max-width: 600px; /* Ancho máximo para móviles */
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0; /* Espacio arriba y abajo */
+    gap: 30px; /* Espacio entre elementos */
 }
 
-#intro-text {
-    font-size: 36px;
+#cover {
+    max-width: 100%;
+    width: 300px; /* Tamaño fijo para móviles */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Sombra pro */
+    animation: fadeIn 1s ease-in;
+}
+
+#tracklist {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
     text-transform: lowercase;
-    margin-bottom: 20px;
 }
 
-#countdown {
-    font-size: 48px;
-    font-weight: bold;
-    color: #fff; /* Blanco para el contador */
-    margin-bottom: 20px;
+#tracklist li {
+    margin: 12px 0;
+    transition: transform 0.3s ease;
+}
+
+#tracklist li:hover {
+    transform: scale(1.05); /* Efecto al tocar */
+}
+
+#tracklist li.strikethrough {
+    text-decoration: line-through; /* Tacha "disque mi fan" */
+}
+
+#message {
+    font-style: italic;
+    font-size: 16px;
+    max-width: 90%;
+    text-transform: lowercase;
+    margin: 20px 0;
+    animation: fadeIn 1.5s ease-in;
+}
+
+#links a {
+    color: #ff0000; /* Rojo YouTube */
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: lowercase;
+    margin: 0 10px;
+}
+
+#links span {
+    color: #fff;
+    font-size: 18px;
+    text-transform: lowercase;
+    margin: 0 10px;
+}
+
+#links a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    #cover {
+        width: 85%; /* Ajusta la portada */
+    }
+    #tracklist {
+        font-size: 18px;
+    }
+    #message {
+        font-size: 14px;
+    }
+    #links a, #links span {
+        font-size: 16px;
+    }
 }
